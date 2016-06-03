@@ -1,0 +1,9 @@
+<%= form_for [@cocktail, @dose] do |d| %>
+  <%= d.label :description %>
+  <%= d.text_field :description %>
+
+  <%= d.label :ingredient_id %>
+  <%= d.collection_select :ingredient_id, Ingredient.all, :id, :name %>
+
+<%= d.submit %>
+<% end %>
